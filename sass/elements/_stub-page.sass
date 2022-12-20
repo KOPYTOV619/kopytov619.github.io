@@ -4,6 +4,8 @@
 		width: 100%
 		margin: 5% 0 0 0
 		pointer-events: none
+		animation: fadeIn 1s both
+		animation-delay: 0.5s
 	&__info
 		width: 100%
 		padding: 0 5%
@@ -13,11 +15,13 @@
 		grid-column-gap: 20px
 		position: absolute
 		bottom: 10%
+
 		p
 			width: fit-content
 			margin: 0
 			margin-top: 20px
 		ul
+			width: fit-content
 			margin-top: 0
 			margin-bottom: 0
 			list-style: none
@@ -26,12 +30,16 @@
 			flex-direction: column
 			justify-content: flex-end
 			align-items: flex-start
+			animation: fadeIn 1s both
+			animation-delay: 1s
 			a
 				text-decoration: none
 				color: $WHITE_COLOR
 				border-bottom: 2px dashed $WHITE_COLOR
 		&-development
 			grid-column: 1/2
+			animation: fadeIn 1s both
+			animation-delay: 1.5s
 		&-social
 			grid-column: 4/5
 			width: fit-content
@@ -154,3 +162,11 @@
 	.stub-page
 		&__logo
 			margin: 20% 0 0 0
+
+@keyframes fadeIn
+	0%
+		transform: translateY(-10%)
+		opacity: 0
+	100%
+		transform: translateY(0)
+		opacity: 1
