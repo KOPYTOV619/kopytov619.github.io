@@ -54,8 +54,6 @@
 			grid-column: 5/7
 			margin-left: 15px
 
-
-
 @media (max-width: 1600px)
 	.stub-page
 		&__info
@@ -63,7 +61,6 @@
 			&-stack
 				margin-left: 0
 
-@media (max-width: 1440px)
 @media (max-width: 1280px)
 	.stub-page
 		&__info
@@ -160,7 +157,6 @@
 				margin-top: 0
 				margin-bottom: 5%
 
-@media (max-width: 576px)
 @media (max-width: 428px)
 	.stub-page
 		&__logo
@@ -169,6 +165,52 @@
 	.stub-page
 		&__logo
 			margin: 20% 0 0 0
+
+@media (max-width: 920px) and (orientation: landscape)
+	.stub-page
+		&__logo
+			margin: 3% 0 0 0
+		&__info
+			padding: 0 3%
+			width: 100%
+			display: grid
+			grid-template-columns: repeat(6, 1fr)
+			grid-column-gap: 20px
+			position: absolute
+			bottom: 7%
+			p
+				width: fit-content
+				margin: 0
+				margin-top: 20px
+				white-space: nowrap
+			ul
+				width: fit-content
+				display: flex
+				flex-direction: column
+				justify-content: flex-end
+				align-items: flex-start
+			&-development
+				grid-column: 1/3
+			&-social
+				order: 0
+				grid-column: 4/5
+				width: fit-content
+
+			&-stack
+				grid-column: 5/7
+
+@media (max-width: 830px) and (orientation: landscape)
+	.stub-page
+		&__info
+			&-development
+				grid-column: 1/3
+				left: 0
+			&-social
+				grid-column: 3/4
+			&-stack
+				grid-column: 4/7
+				right: 0
+
 
 @keyframes fadeIn
 	0%
